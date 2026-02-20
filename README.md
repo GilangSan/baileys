@@ -939,36 +939,6 @@ console.log('🏷️ Got user ID', ':', ids)
 // --- Same output shape regardless of input type
 ```
 
-#### 🖼️ Image Processing (FFmpeg)
-
-```javascript
-import { getImageProcessingLibrary } from '@itsliaaa/baileys'
-
-const lib = await getImageProcessingLibrary()
-
-if (lib.ffmpeg) {
-   const job = await lib.ffmpeg({
-      args: [
-         '-i', 'path/to/media.jpg',
-         '-frames:v', '1',
-         '-q:v', '10'
-      ],
-      extension: 'jpg' // --- Used for output file extension
-   })
-
-   const buffer = await job.toBuffer() // --- Optional if you need a buffer. The output file will be deleted automatically after the buffer is created.
-}
-else {
-   throw new Error('FFmpeg not available')
-}
-
-// --- Output
-// {
-//    outputFilename: 'output/path.jpg',
-//    toBuffer: [AsyncFunction: toBuffer]
-// }
-```
-
 #### 🔑 Request Custom Pairing Code
 
 > 📝 The phone number must contain numbers only (no +, (), or -) and must include the country code.
