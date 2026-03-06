@@ -4,7 +4,7 @@
 
 A lightweight fork of Baileys with a few fixes and a small adjustment.
 
-### ⚙️ **Changes**
+### ⚙️ Changes
 
 #### 🛠️ Internal Adjustments
 - 🖼️ Fixed an issue where media could not be sent to newsletters due to an upstream issue.
@@ -27,7 +27,7 @@ A lightweight fork of Baileys with a few fixes and a small adjustment.
 >
 > 😞 And, really sorry for my bad english.
 
-### 📥 **Installation**
+### 📥 Installation
 
 - 📄 Via `package.json`
 
@@ -63,7 +63,7 @@ import { makeWASocket } from '@itsliaaa/baileys'
 const { makeWASocket } = require('@itsliaaa/baileys')
 ```
 
-### 🔧 **Usage**
+### 🔧 Usage
 
 #### 🌐 Connect to WhatsApp (Quick Step)
 
@@ -260,14 +260,14 @@ sock.sendMessage(jid, {
 ```javascript
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Elia Wynn\n'
+            + 'FN:Lia Wynn\n'
             + 'ORG:Waiters;\n'
             + 'TEL;type=CELL;type=VOICE;waid=628123456789:+62 8123 4567 89\n'
             + 'END:VCARD'
 
 sock.sendMessage(jid, {
    contacts: {
-      displayName: 'Elia',
+      displayName: 'Lia',
       contacts: [
          { vcard }
       ]
@@ -462,7 +462,7 @@ sock.sendMessage(jid, {
       }
    }],
    name: '📦 My Sticker Pack',
-   publisher: '🌟 Elia',
+   publisher: '🌟 Lia Wynn',
    description: '@itsliaaa/baileys'
 }, {
    quoted: message
@@ -1063,11 +1063,11 @@ const group = await sock.groupGetInviteInfo('https://chat.whatsapp.com/ABC123')
 console.log('👥 Got group info from link', ':', group)
 ```
 
-## 📦 **Fork Base**
+## 📦 Fork Base
 > [!NOTE]
 This fork is based on [Baileys (GitHub)](https://github.com/WhiskeySockets/Baileys)
 
-## 📣 **Credits**
+## 📣 Credits
 > [!IMPORTANT]
 This fork uses Protocol Buffer definitions maintained by [WPP Connect](https://github.com/wppconnect-team) via [`wa-proto`](https://github.com/wppconnect-team/wa-proto)
 > 
